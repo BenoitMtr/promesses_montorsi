@@ -1,7 +1,10 @@
-# promesses_montorsi
+# Javascript - Promesses: Utilisation de l'API iTunes
 
-##Comment utiliser l'application?
+Ce TP consiste en une exploitation de l'API iTunes, afin de rechercher des musiques en utilisant les promesses de Javascript
 
-- aller dans le dossier racine
-- npx serve
-- aller à l'adresse indiquée sur la console
+
+# Comment lancer l'application?
+
+- aller au dossier racine du projet
+- lancer *npx serve* dans la console
+- se rendre à l'adresse indiquée dans la console

@@ -49,3 +49,9 @@ audio
 {
     display: none;
 }
+
+#divRes
+{
+    display:inline-block;
+    margin: 1em;
+}

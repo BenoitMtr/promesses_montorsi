@@ -3,6 +3,7 @@ let search;
 let body;
 let searchDiv;
 let resultDiv;
+
 window.onload=function()
 {
     btn=document.querySelector("#submit");
@@ -20,22 +21,22 @@ function muteSounds() {
     })
 }
 
-async function doWork() {
+async function fetchResults() {
     let texte = search.value;
     let result;
     document.querySelector("#loadingText").innerHTML="Chargement...";
     resultDiv.innerHTML="";
+
+    //pour éviter les problèmes de CORS lors du fetch
     let headers = new Headers();
 
     headers.append('Access-Control-Allow-Origin', '*');
     headers.append('Access-Control-Allow-Credentials', 'true');
 
-
     try{
         let result2 = await fetch(
             'https://itunes.apple.com/search?term=' + texte,{
-                headers: headers,
-                mode: 'no-cors'
+                headers: headers
             }
         ).then(r => result=r.json())
             .then(data => {
@@ -55,8 +56,12 @@ async function doWork() {
                     alert("Chargement terminé, appuyez sur les jaquettes pour écouter un extrait");
 
                     result.results.forEach((element) => {
+                        let divRes=document.createElement("div");
+                        divRes.id="divRes";
+                        //on crée les éléments HTML pour chaque résultat de recherche
                         let textElement=document.createElement("p");
                         textElement.id="resultTitle";
+                        divRes.appendChild(textElement);
                         let artwork=document.createElement("img");
                         let audioPreview=document.createElement("audio");
                         audioPreview.id       = 'audio-player';
@@ -76,8 +81,9 @@ async function doWork() {
                         console.log(element);
                         textElement.innerHTML=element['trackName']+' - '+element['artistName'];
                         artwork.src=element['artworkUrl100'];
-                        resultDiv.appendChild(textElement);
-                        resultDiv.appendChild(artwork);
+                        divRes.appendChild(artwork);
+                        divRes.appendChild(audioPreview);
+                        resultDiv.appendChild(divRes);
                     })
                 }
                 //pour éviter que des musiques soient jouées après avoir fait une recherche pendant qu'on joue un extrait
