@@ -34,7 +34,8 @@ async function doWork() {
     try{
         let result2 = await fetch(
             'https://itunes.apple.com/search?term=' + texte,{
-                headers: headers
+                headers: headers,
+                mode: 'no-cors'
             }
         ).then(r => result=r.json())
             .then(data => {
