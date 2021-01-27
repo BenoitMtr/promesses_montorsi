@@ -25,10 +25,17 @@ async function doWork() {
     let result;
     document.querySelector("#loadingText").innerHTML="Chargement...";
     resultDiv.innerHTML="";
+    let headers = new Headers();
+
+    headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
+    headers.append('Access-Control-Allow-Credentials', 'true');
+
 
     try{
         let result2 = await fetch(
-            'https://itunes.apple.com/search?term=' + texte
+            'https://itunes.apple.com/search?term=' + texte,{
+                headers: headers
+            }
         ).then(r => result=r.json())
             .then(data => {
                 console.log(data.results.length);
