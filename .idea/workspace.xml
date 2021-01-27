@@ -11,6 +11,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="package.json" />
       </list>
     </option>
   </component>
@@ -35,7 +36,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611657968370</updated>
       <workItem from="1611657969654" duration="24714000" />
-      <workItem from="1611756197065" duration="8507000" />
+      <workItem from="1611756197065" duration="8874000" />
     </task>
     <servers />
   </component>
