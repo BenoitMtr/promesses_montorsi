@@ -27,7 +27,7 @@ async function doWork() {
     resultDiv.innerHTML="";
     let headers = new Headers();
 
-    headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
+    headers.append('Access-Control-Allow-Origin', '*');
     headers.append('Access-Control-Allow-Credentials', 'true');
 
 
