@@ -1,10 +1,11 @@
 #search
 {
     padding: 6px;
-    border: none;
+    border: 1px solid;
     margin-top: 8px;
     margin-right: 16px;
     font-size: 17px;
+    box-shadow: 5px 5px 2px 1px gray;
 }
 
 #searchDiv
@@ -22,12 +23,6 @@ h2
     font-size: 30px;
     line-height: 40px;
     font-family: 'Orienta', sans-serif;
-}
-
-#resultDiv
-{
-    border: gray solid;
-    margin: 5em;
 }
 
 #resultTitle
@@ -54,4 +49,6 @@ audio
 {
     display:inline-block;
     margin: 1em;
+    border: 1px solid gray;
+    padding: 1em;
 }

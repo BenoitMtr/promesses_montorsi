@@ -56,9 +56,11 @@ async function fetchResults() {
                     alert("Chargement terminé, appuyez sur les jaquettes pour écouter un extrait");
 
                     result.results.forEach((element) => {
+                        //on crée les éléments HTML pour chaque résultat de recherche
+
                         let divRes=document.createElement("div");
                         divRes.id="divRes";
-                        //on crée les éléments HTML pour chaque résultat de recherche
+
                         let textElement=document.createElement("p");
                         textElement.id="resultTitle";
                         divRes.appendChild(textElement);
