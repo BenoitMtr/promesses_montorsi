@@ -1,0 +1,51 @@
+#search
+{
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+#searchDiv
+{
+    text-align: center;
+
+}
+
+h2
+{
+    text-align: center;
+    margin: 1em 0 0.5em 0;
+    color: #343434;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 40px;
+    font-family: 'Orienta', sans-serif;
+}
+
+#resultDiv
+{
+    border: gray solid;
+    margin: 5em;
+}
+
+#resultTitle
+{
+    margin: 1em 0 0.5em 0;
+    color: #343434;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 25px;
+    font-family: 'Orienta', sans-serif;
+}
+
+img
+{
+    cursor: pointer;
+}
+
+audio
+{
+    display: none;
+}

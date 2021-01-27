@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Utilisation de l'API iTunes</title>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h2>Recherche de titres iTunes</h2>
+<!-- barre de recherche inspirée de https://www.w3schools.com/howto/howto_css_searchbar.asp -->
+<div id="searchDiv"><input type="search" id="search" placeholder="Entrez un ou des mots clés ici"> <i class="fa fa-search" onclick="doWork()"></i> <p id="loadingText"></p>
+</div>
+<div id="resultDiv"></div>
+</body>
+</html>
